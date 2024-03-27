@@ -1,7 +1,7 @@
-const express = require('express')
-const path = require('path')   // path es para tener disponible todas nuestras carpetas, para poder entrar
+import express from 'express';
+import path from 'path';   // path es para tener disponible todas nuestras carpetas, para poder entrar
 
-const startServer = (options) => {
+export const startServer = (options) => {
     const { port, public_path = 'public' } = options;
 
     const app = express()
@@ -17,10 +17,7 @@ const startServer = (options) => {
     app.listen(port, () => {
         console.log(`Escuchando en el puerto ${port}`)
     })
-
 }
 
 
-module.exports = {
-    startServer
-}
+
